@@ -17,4 +17,16 @@ public class LuceneData {
 
     private String language;
 
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+
+        builder.append("\n\n");
+        builder.append(String.format(" DIRECTORY:  %s \n", directory) );
+        builder.append(String.format(" SOLR URL:  %s", solrURL) );
+        builder.append(String.format(" DATASET:  %s", dataset) );
+        builder.append(String.format(" LANGUAGE:  %s", language) );
+
+        return builder.toString();
+    }
+
 }

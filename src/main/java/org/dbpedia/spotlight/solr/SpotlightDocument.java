@@ -27,6 +27,8 @@ public class SpotlightDocument {
 
     private Set<String> context;
 
+    private Set<String> type;
+
 
     public static SpotlightDocument from(Document document, String dataset, String language) {
 
@@ -48,6 +50,11 @@ public class SpotlightDocument {
         Arrays.stream(document.getFieldables(Fields.CONTEXT)).forEach(sf -> contexts.add(sf.stringValue()));
         spotlightDocument.setContext(contexts);
 
+        Set<String> types = new HashSet<>();
+
+        Arrays.stream(document.getFieldables(Fields.TYPE)).forEach(tp -> types.add(tp.stringValue()));
+        spotlightDocument.setType(types);
+
         return spotlightDocument;
     }
 
@@ -61,11 +68,11 @@ public class SpotlightDocument {
         solrDocument.addField(Fields.URI_COUNT, spotlightDocument.getUriCount());
         solrDocument.addField(Fields.URI_COUNT.concat("_i"), spotlightDocument.getUriCount());
 
-
         surfaceForms.stream().forEach(sf -> solrDocument.addField(Fields.SURFACE_FORM, sf));
 
         context.stream().forEach(ctx -> solrDocument.addField(Fields.CONTEXT, ctx));
 
+        type.stream().forEach(tp -> solrDocument.addField(Fields.TYPE, tp));
 
         return solrDocument;
     }

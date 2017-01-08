@@ -9,4 +9,6 @@ public interface Fields {
     String URI_COUNT = "URI_COUNT";
     String SURFACE_FORM = "SURFACE_FORM";
     String CONTEXT = "CONTEXT";
+    String TYPE = "TYPE";
+
 }
