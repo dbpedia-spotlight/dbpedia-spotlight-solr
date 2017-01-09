@@ -34,7 +34,7 @@ Happy searching!!
 
 ## Issues
 
-If you have any problems with or questions about this library, please contact us through a [GitHub issue](https://github.com/sandroacoelho/dbpedia-spotlight-solr/issues).
+If you have any problems with or questions about this library, please contact us through a [GitHub issue](https://github.com/dbpedia-spotlight/dbpedia-spotlight-solr/issues).
 
 
 ## How to cite: Lucene version
