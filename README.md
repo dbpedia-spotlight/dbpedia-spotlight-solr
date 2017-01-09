@@ -14,7 +14,6 @@ We have created the [lucene-quickstarter](https://github.com/dbpedia-spotlight/l
 
 The latest indices can be found ![Dropbox](http://www.iconsdb.com/icons/download/blue/dropbox-24.png) [HERE](https://www.dropbox.com/sh/q3vd67yr02w78mv/AAAc8K8_PkAAYO8a0scYsQ5Xa?dl=0).
 
-
 ## How to use?
 
 SOLR:
@@ -26,6 +25,7 @@ SOLR:
 DBpedia Spotlight SOLR:
 
 * Compile this repo using mvn clean compile assembly:single (You will need Java 8 and Maven)
+* Download or create the index that you want to load in SOLR (See  Where are lucene's data? section)
 * Run it filling language, dataset, path to lucene index and URL to SOLR (E.g: java -jar target/solr-1.0-jar-with-dependencies.jar en dbpedia spotlight/lucene/2016-04/en/index-withSF-withTypes http://localhost:8983/solr/2016-04-EN)
 
 Wait for the process to finish (it takes several minutes). When it finishes, you can query it using through the URL http://localhost:8983/solr/#/2016-04-EN/query.
