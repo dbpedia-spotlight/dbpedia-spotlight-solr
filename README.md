@@ -16,13 +16,13 @@ The latest indices can be found ![Dropbox](http://www.iconsdb.com/icons/download
 
 ## How to use?
 
-*SOLR:*
+**SOLR:**
 
 * [Install](https://cwiki.apache.org/confluence/display/solr/Installing+Solr) the latest version of Apache SOLR
 * Start it - (Eg.: ./solr start -m 6g)
 * Create a core to store the data -(E.g: ./solr create_core -c 2016-04-EN)
 
-*DBpedia Spotlight SOLR:*
+**DBpedia Spotlight SOLR:**
 
 * Compile this repo using mvn clean compile assembly:single (You will need Java 8 and Maven)
 * Download or create the index that you want to load in SOLR (See  Where are lucene's data? section)
