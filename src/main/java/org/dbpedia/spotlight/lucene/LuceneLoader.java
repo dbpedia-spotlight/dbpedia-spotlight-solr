@@ -18,7 +18,7 @@ public class LuceneLoader {
 
     private final static Logger LOGGER = Logger.getLogger(LuceneLoader.class.getName());
 
-    private static final int SIZE = 10000;
+    public static final int SIZE = 10000;
 
     public static void loadData(LuceneData data) throws IOException {
         File indexDirectory = new File(data.getDirectory());

@@ -1,11 +1,9 @@
 package org.dbpedia.spotlight.solr;
 
 import org.apache.solr.client.solrj.SolrClient;
-import org.apache.solr.client.solrj.SolrServerException;
-import org.apache.solr.client.solrj.impl.HttpSolrClient;
+import org.apache.solr.client.solrj.impl.ConcurrentUpdateSolrClient;
 import org.dbpedia.spotlight.lucene.LuceneLoader;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 import java.util.logging.Level;
@@ -19,7 +17,12 @@ public class LoaderManager {
 
         Objects.requireNonNull(spotlightDocuments);
 
-        SolrClient solr = new HttpSolrClient.Builder(solrURL).build();
+
+        int processors = Runtime.getRuntime().availableProcessors();
+
+        SolrClient solr = new ConcurrentUpdateSolrClient.Builder(solrURL).
+                withThreadCount(processors)
+                .withQueueSize(LuceneLoader.SIZE/processors).build();;
 
         spotlightDocuments.stream().forEach(spotlightDocument -> {
             try {
