@@ -22,7 +22,7 @@ DBpedia Spotlight SOLR is a technological version update for DBpedia Spotlight L
 
 We have created the [lucene-quickstarter](https://github.com/dbpedia-spotlight/lucene-quickstarter) repo using the original code (with some improvements) to continue making available the data provided by the approach published in [DBpedia Spotlight: Shedding Light on the Web of Documents](http://wifo5-03.informatik.uni-mannheim.de/bizer/pub/Mendes-Jakob-GarciaSilva-Bizer-DBpediaSpotlight-ISEM2011.pdf). 
 
-The latest indices can be found ![Dropbox](http://www.iconsdb.com/icons/download/blue/dropbox-24.png) [HERE](https://www.dropbox.com/sh/q3vd67yr02w78mv/AAAc8K8_PkAAYO8a0scYsQ5Xa?dl=0).
+The latest indices can be found [HERE](http://downloads.dbpedia-spotlight.org).
 
 ## How to use?
 
